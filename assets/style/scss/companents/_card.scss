@@ -1,0 +1,41 @@
+@import "../abstract/variables";
+.product-card {
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 30px 15px;
+  line-height: 20px;
+  position: relative;
+  .product-like{
+   position: absolute;
+    top: 2%;
+  right: 2%;
+    border: 1px solid $lightgray;
+    color: $secondarycolor;
+    border-radius: 50%;
+z-index: 999;
+padding: 15px;
+font-size: 25px;
+  }
+  &_img {
+    width: 100%;
+    padding: 20px;
+
+  }
+  &_rating {
+    margin-top: 10px;
+  }
+  &-prime {
+    color: $primecolor;
+    font-weight: 700;
+    font-size: 20px;
+    display: block;
+    margin: 10px 0;
+  }
+  &_info {
+    padding: 20px;
+    p {
+      letter-spacing: 1px;
+    }
+  }
+}

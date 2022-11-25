@@ -1,0 +1,21 @@
+.footer{
+    background-color: $darkcolor;
+    color:#fff;
+    padding: 40px;
+    line-height: 25px;
+.footer-line{
+        margin-top: 40px;
+       background-color: $linecolor;
+}
+    a{
+        color:#fff;
+        font-size: 14px;
+    }
+h4{
+    margin: 20px 0;
+}
+&-bottom{
+
+    @include display ;
+}
+}
