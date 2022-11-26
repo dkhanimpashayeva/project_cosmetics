@@ -368,7 +368,8 @@ a {
   width: 100%;
   padding: 0%;
   height: 320px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
 }
 .product-top .product-changer, .product-bottom .product-changer {
@@ -486,4 +487,4 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+}/*# sourceMappingURL=main.css.map */
