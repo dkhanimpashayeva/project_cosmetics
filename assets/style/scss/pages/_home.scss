@@ -1,96 +1,106 @@
-@import"../abstract/mixins";
-.hero{
-    margin: 10px 0;
-    &-img{
-position: relative;
-width: 100%;
-
-}
-span{
+@import "../abstract/mixins";
+.hero {
+  margin: 10px 0;
+  &-img {
+    position: relative;
+    width: 100%;
+  }
+  span {
     position: absolute;
-     z-index: 999;
+    z-index: 999;
     box-shadow: 0px 4px 8px rgba(29, 33, 35, 0.08);
     border-radius: 50%;
-    padding: 25px 27px;
+    padding: 1.5rem;
     background-color: #fff;
-    top: 55%;
-    &.left-arrow{
-        left: 10%;
+
+    top: 50%;
+
+    &.left-arrow {
+      left: 10%;
     }
-    &.right-arrow{
-       right:10%;
+    &.right-arrow {
+      right: 10%;
     }
+  }
+}
+@media screen and (max-width: 992px) {
+  .hero {
+    .left-arrow,
+    .right-arrow {
+      display: none;
+    }
+  }
 }
 
-
-}
 //Hero End
-.product-top , .product-bottom{
-    padding-top: 20px;
-    margin-top:20px ;
-    background-color: $primarycolor;
+.product-top,
+.product-bottom {
+  padding-top: 20px;
+  margin-top: 20px;
+  background-color: $primarycolor;
   position: relative;
-    .product-title{
-       @include display;
-    }
-    .rectangle{
-   
-        
-width: 100%;
-padding: 0%;
-height: 320px;
-object-fit: cover;
-overflow: hidden;
-    }
-    .product-changer{
-        position: absolute;
-        right: 10%;
-        top: 50%;
-       
-    }
+  .product-title {
+    @include display;
+  }
+  .rectangle {
+    width: 100%;
+    padding: 0%;
+    height: 320px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .product-changer {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+  }
 }
 
 //Section Product end
-.display-products{
-img{
+.display-products {
+  img {
     width: 100%;
     height: 100%;
-}
-    .advertise-img{
-      margin-left: 30px;
-    }
-}
-
-.sale-ads{
-    padding-top: 30px;
-    background-color: $primarycolor;
-
+  }
+  .advertise-img {
+    margin-left: 30px;
+  }
 }
 
-.related-companies_top{
-    padding:50px 0 ;
-display: flex;
-background-color: $primarycolor;
-overflow: hidden;
-.related-img{
-       margin-left: 45px; 
-       
+.sale-ads {
+  padding-top: 30px;
+  background-color: $primarycolor;
 }
+
+.related-companies_top {
+  padding: 50px 0;
+  display: flex;
+  background-color: $primarycolor;
+  overflow: hidden;
+  .related-img {
+    margin-left: 45px;
+  }
 }
-.related-companies_bottom{
-    // display: block;
-    background-color: $bgbottom;
-    text-align: center;
-    padding: 50px;
-    .input-email{
-        background-color: $bginput1;
-        border-radius: 10px;
+.related-companies_bottom {
+  // display: block;
+  background-color: $bgbottom;
+  text-align: center;
+  padding: 50px;
+  .input-email {
+    background-color: $bginput1;
+    border-radius: 10px;
     margin-top: 20px;
-        padding: 15px 30px 10px 15px;
-        border :none;
-        width: 30%;
-      &:hover{
-    outline:2px solid $primecolor;
-      }
+    padding: 15px 30px 10px 15px;
+    border: none;
+    width: 30%;
+    &:hover {
+      outline: 2px solid $primecolor;
     }
+  }
+}
+
+@media only screen and (max-width: 768) {
+  .unresponsiv {
+    display: none;
+  }
 }

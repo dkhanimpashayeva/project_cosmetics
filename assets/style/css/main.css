@@ -280,40 +280,64 @@ a {
   align-items: center;
   justify-content: space-around;
 }
-.header-top-input {
-  padding: 30px;
+.header-top .header-responsive {
+  display: none !important;
 }
-.header-top .nav-list ul li {
-  margin-left: 20px;
-}
-.header-top .header-main {
+.header-top .header-form {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
 }
-.header-top .header-main-lang {
-  margin-left: 10px;
-}
-.header-top .header-main-lang a {
-  color: #000;
-}
-.header-top .header-main-lang a.hidden {
-  display: none;
-}
-.header-top .header-main .btn-search {
-  background-color: #F6F6F8;
-  border-radius: 10px;
-  margin-right: 20px;
-  padding: 10px 70px 10px 15px;
-}
-.header-top .header-main .btn-search:hover {
-  border: 2px solid #9747FF;
-}
-.header-top .header-main .btn-search-input {
-  outline: none;
+.header-top .header-form .language select {
   border: none;
+  margin-left: 10px;
+  outline: none;
+}
+.header-top .header-form_search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 30px;
 }
 
+.nav-list ul li {
+  margin: 0 10px;
+}
+.nav-list ul li.counter {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #F0289E;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.header-responsive {
+  display: none !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .hamburger {
+    display: block !important;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+  }
+  .header-top .header-responsive {
+    display: block !important;
+    width: 100%;
+  }
+  .header-responsive {
+    display: block !important;
+  }
+  .header-form {
+    display: none !important;
+  }
+  .header-bottom {
+    display: none;
+  }
+}
 .header-bottom {
   background-color: #1D2123;
   padding: 20px;
@@ -330,6 +354,27 @@ a {
   text-decoration: none;
 }
 
+.hamburger {
+  display: none;
+}
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: 0.3s ease-in;
+  background-color: black;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 .hero {
   margin: 10px 0;
 }
@@ -342,9 +387,9 @@ a {
   z-index: 999;
   box-shadow: 0px 4px 8px rgba(29, 33, 35, 0.08);
   border-radius: 50%;
-  padding: 25px 27px;
+  padding: 1.5rem;
   background-color: #fff;
-  top: 55%;
+  top: 50%;
 }
 .hero span.left-arrow {
   left: 10%;
@@ -353,18 +398,27 @@ a {
   right: 10%;
 }
 
-.product-top, .product-bottom {
+@media screen and (max-width: 992px) {
+  .hero .left-arrow,
+.hero .right-arrow {
+    display: none;
+  }
+}
+.product-top,
+.product-bottom {
   padding-top: 20px;
   margin-top: 20px;
   background-color: #FAF9F9;
   position: relative;
 }
-.product-top .product-title, .product-bottom .product-title {
+.product-top .product-title,
+.product-bottom .product-title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.product-top .rectangle, .product-bottom .rectangle {
+.product-top .rectangle,
+.product-bottom .rectangle {
   width: 100%;
   padding: 0%;
   height: 320px;
@@ -372,7 +426,8 @@ a {
      object-fit: cover;
   overflow: hidden;
 }
-.product-top .product-changer, .product-bottom .product-changer {
+.product-top .product-changer,
+.product-bottom .product-changer {
   position: absolute;
   right: 10%;
   top: 50%;
@@ -418,6 +473,11 @@ a {
   outline: 2px solid #F0289E;
 }
 
+@media only screen and (max-width: 768) {
+  .unresponsiv {
+    display: none;
+  }
+}
 .product-card {
   overflow: hidden;
   background-color: #fff;
@@ -466,6 +526,21 @@ a {
   font-weight: 500;
 }
 
+.input-search {
+  background-color: #F6F6F8;
+  border-radius: 20px;
+  padding: 15px 250px 15px 10px;
+}
+.input-search input {
+  outline: none;
+  border: none;
+  background-color: #F6F6F8;
+  transition: 0.2s ease-in;
+}
+.input-search:hover {
+  outline: 3px solid #9747FF;
+}
+
 .footer {
   background-color: #1D2123;
   color: #fff;
@@ -486,5 +561,5 @@ a {
 .footer-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }/*# sourceMappingURL=main.css.map */

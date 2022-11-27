@@ -1,0 +1,16 @@
+.input-search {
+  background-color: $bginput1;
+  border-radius: 20px;
+  padding: 15px 250px 15px 10px;
+
+  input {
+    outline: none;
+    border: none;
+    background-color: $bginput1;
+    
+    transition: 0.2s ease-in;
+  }
+  &:hover {
+    outline: 3px solid $violetcolor;
+  }
+}
